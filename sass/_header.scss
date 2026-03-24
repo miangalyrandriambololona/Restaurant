@@ -1,0 +1,92 @@
+$gold-marais:       #96835a;
+$gold-marais-hover: #b29c77;
+$white:             #ffffff;
+$text-nav:          #1a1a1a;
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 14px 5%;
+    background: rgba(245, 245, 220, 0.97); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid rgba(150, 131, 90, 0.2); 
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+
+    .logo a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: $text-nav;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 4px;
+        font-size: 1rem;
+        text-transform: uppercase;
+
+        img { height: 32px; }
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        gap: 18px;
+
+        li a {
+            text-decoration: none;
+            color: $text-nav;
+            font-size: 10.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.25s;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+            transition: color 0.25s, border-color 0.25s;
+
+            &:hover {
+                color: $gold-marais;
+                border-bottom-color: $gold-marais;
+            }
+        }
+
+        .btn-booking {
+            background-color: $gold-marais;
+            color: $white !important;
+            padding: 9px 20px;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 2px; 
+            letter-spacing: 1.5px;
+            border-bottom: none !important;
+            transition: background-color 0.3s, transform 0.2s;
+
+            &:hover {
+                background-color: $gold-marais-hover;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+
+        .navigation ul {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+}
