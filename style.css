@@ -1,0 +1,60 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 15px 5%;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+}
+.header .logo img {
+  height: 45px;
+}
+.header .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+.header .navigation ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.header .navigation ul li a:hover {
+  color: #2d5a27;
+}
+.header .navigation ul .btn-booking {
+  background-color: #2d5a27;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+.header .navigation ul .btn-booking:hover {
+  background-color: rgb(53.8953488372, 107.7906976744, 46.7093023256);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+  }
+  .header .navigation ul {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+$green-dark: #2d5a27; // Couleur de ton bouton sur l'image
+$text-color: #333;
+$font-stack: 'Inter', sans-serif;
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr; // Grille : Logo auto, Nav prend le reste
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    font-family: $font-stack;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: $text-color;
+        
+        img { height: 45px; }
+    }
+
+    .navigation {
+        ul {
+            display: flex; // Flexbox pour aligner les liens
+            justify-content: flex-end; // Pousse tout à droite
+            align-items: center;
+            list-style: none;
+            gap: 25px;
+
+            li a {
+                text-decoration: none;
+                color: $text-color;
+                font-size: 14px;
+                font-weight: 500;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $green-dark;
+                }
+            }
+
+            .btn-booking {
+                background-color: $green-dark;
+                color: #fff;
+                padding: 10px 25px;
+                border-radius: 50px; // Bouton arrondi comme ton image
+                
+                &:hover {
+                    background-color: lighten($green-dark, 5%);
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design (Mobile)
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+
+        .navigation ul {
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; // Les liens passent à la ligne si besoin
+        }
+    }
+}
