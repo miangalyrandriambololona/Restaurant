@@ -1,17 +1,111 @@
-@use 'header'; 
+@use 'header';
 @use 'footer';
 
-html, body {
-    height: 100%; 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400&family=Inter:wght@400;600&display=swap');
+
+*, *::before, *::after {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; 
+    min-height: 100vh;
 }
 
 main {
-    flex: 1; 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
 
-.main-footer {
-    margin-top: auto; 
+.hero {
+    width: 100%;
+    flex: 1;
+    position: relative;
+    background: url("../images/accueil.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;         
+    padding: 0 7%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            105deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.45) 45%,
+            rgba(0, 0, 0, 0.05) 100%
+        );
+        pointer-events: none;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: #96835a;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3.5rem, 7vw, 6.5rem);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        line-height: 1;
+        color: #ffffff;
+        text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.45em;
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: flex-end;
+        padding: 0 5% 60px;
+
+        &::before {
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.2) 100%
+            );
+        }
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+
+        &::before { margin: 0 auto 8px; }
+    }
 }
