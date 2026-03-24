@@ -1,10 +1,10 @@
-$green-dark: #2d5a27; // Couleur de ton bouton sur l'image
+$green-dark: #155608; 
 $text-color: #333;
 $font-stack: 'Inter', sans-serif;
 
 .header {
     display: grid;
-    grid-template-columns: auto 1fr; // Grille : Logo auto, Nav prend le reste
+    grid-template-columns: auto 1fr; 
     align-items: center;
     padding: 15px 5%;
     background: #fff;
@@ -23,8 +23,8 @@ $font-stack: 'Inter', sans-serif;
 
     .navigation {
         ul {
-            display: flex; // Flexbox pour aligner les liens
-            justify-content: flex-end; // Pousse tout à droite
+            display: flex; 
+            justify-content: flex-end; 
             align-items: center;
             list-style: none;
             gap: 25px;
@@ -45,7 +45,7 @@ $font-stack: 'Inter', sans-serif;
                 background-color: $green-dark;
                 color: #fff;
                 padding: 10px 25px;
-                border-radius: 50px; // Bouton arrondi comme ton image
+                border-radius: 50px; 
                 
                 &:hover {
                     background-color: lighten($green-dark, 5%);
@@ -54,6 +54,8 @@ $font-stack: 'Inter', sans-serif;
         }
     }
 }
+
+
 
 // Responsive Design (Mobile)
 @media (max-width: 1024px) {
@@ -65,7 +67,7 @@ $font-stack: 'Inter', sans-serif;
         .navigation ul {
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap; // Les liens passent à la ligne si besoin
+            flex-wrap: wrap; 
         }
     }
 }
