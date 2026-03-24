@@ -1,2 +1,15 @@
-Todo:
-    
+- Recherche de site
+- téléchargement des éléments
+
+
+Accueil.html ( index.html ):
+    Header:
+    - Accueil
+    - Le Chef
+    - Le Restaurant
+    - Cartes et Menus
+    - Événements
+    - Réservation
+    - Contact
+
+
