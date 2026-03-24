@@ -1,29 +1,27 @@
 $gold-marais: #96835a;
-$beige-footer: #f5f5dc; // Même beige que le header pour l'unité
+$beige-footer: #f5f5dc; 
 $text-dark: #333333;
 
 .main-footer {
     background-color: $beige-footer;
-    border-top: 1px solid rgba(0,0,0,0.05); // Petite ligne de séparation
+    border-top: 1px solid rgba(0,0,0,0.05); 
     padding: 20px 5%;
     font-family: 'Inter', sans-serif;
 
     .footer-container {
         display: grid;
-        // Leçon Grid : 3 colonnes de largeur égale
         grid-template-columns: repeat(3, 1fr); 
         align-items: center;
         gap: 20px;
     }
 
     .footer-section {
-        // Leçon Flex : aligner l'icône et le texte horizontalement
         display: flex;
         align-items: center;
-        justify-content: center; // Centre le contenu dans la colonne
+        justify-content: center; 
         gap: 10px;
         color: $text-dark;
-        font-size: 11px; // Petite police lisible comme demandé
+        font-size: 11px; 
         font-weight: 500;
 
         a {
@@ -33,21 +31,18 @@ $text-dark: #333333;
         }
 
         .icon {
-            color: $gold-marais; // Icônes en doré
+            color: $gold-marais; 
             font-size: 14px;
         }
 
-        // Alignement spécifique (Gauche, Centre, Droite) pour coller au design
         &:first-child { justify-content: flex-start; }
         &:last-child { justify-content: flex-end; }
     }
 }
 
-// Responsive Design
 @media (max-width: 768px) {
     .main-footer {
         .footer-container {
-            // Leçon Grid : Passage en 1 colonne sur mobile
             grid-template-columns: 1fr;
             text-align: center;
             gap: 15px;
